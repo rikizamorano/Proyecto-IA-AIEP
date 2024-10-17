@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ProyAI_MVC.props" />
+</Project>

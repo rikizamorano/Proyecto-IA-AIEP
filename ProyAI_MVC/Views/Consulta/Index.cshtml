@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Consulta>
+
+<h1>Consultas</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Pregunta</th>
+            <th>Respuesta</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var consulta in Model)
+        {
+            <tr>
+                <td>@consulta.Pregunta</td>
+                <td>@consulta.Respuesta</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Realizar Nueva Consulta</h2>
+
+<form asp-action="Crear" method="post">
+    <input type="text" name="pregunta" required />
+    <button type="submit">Enviar</button>
+</form>
