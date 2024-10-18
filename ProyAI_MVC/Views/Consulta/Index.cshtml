@@ -1,28 +1,42 @@
-﻿@model IEnumerable<Consulta>
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Instruccional</title>
+    <link rel="stylesheet" href="path/to/your/styles.css"> <!-- Cambia esto al path correcto -->
+</head>
+<body>
+    <h1>Asistente Instruccional</h1>
+    <p>Para comenzar, elija un módulo, a continuación, seleccione una unidad y, finalmente, escoja un tema de aprendizaje. Cada elección depende de la anterior. Una vez que haya seleccionado todas las opciones, haga clic en 'Continuar'.</p>
 
-<h1>Consultas</h1>
+    <select>
+        <option>Seleccione un módulo</option>
+        <!-- Otras opciones -->
+    </select>
 
-<table>
-    <thead>
-        <tr>
-            <th>Pregunta</th>
-            <th>Respuesta</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var consulta in Model)
-        {
-            <tr>
-                <td>@consulta.Pregunta</td>
-                <td>@consulta.Respuesta</td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <select>
+        <option>Seleccione unidad</option>
+        <!-- Otras opciones -->
+    </select>
 
-<h2>Realizar Nueva Consulta</h2>
+    <select>
+        <option>Seleccione aprendizaje</option>
+        <!-- Otras opciones -->
+    </select>
 
-<form asp-action="Crear" method="post">
-    <input type="text" name="pregunta" required />
-    <button type="submit">Enviar</button>
-</form>
+    <button>CONTINUAR</button>
+
+    <div class="separator"></div> <!-- Línea separativa -->
+    <hr>
+    
+   
+    <section>
+        <h2>Realizar Nueva Consulta</h2>
+        <form asp-action="Crear" method="post">
+            <input type="text" name="pregunta" placeholder="Escribe tu pregunta" required />
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
