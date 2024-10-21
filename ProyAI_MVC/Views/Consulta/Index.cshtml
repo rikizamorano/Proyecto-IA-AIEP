@@ -29,14 +29,27 @@
 
     <div class="separator"></div> <!-- Línea separativa -->
     <hr>
-    
-   
+
     <section>
         <h2>Realizar Nueva Consulta</h2>
         <form asp-action="Crear" method="post">
             <input type="text" name="pregunta" placeholder="Escribe tu pregunta" required />
             <button type="submit">Enviar</button>
         </form>
+    </section>
+
+    <section>
+        <h2>Historial de Consultas</h2>
+        <ul>
+            @foreach (var consulta in Model)
+            {
+                <li>
+                    <strong>Pregunta:</strong> @consulta.Pregunta <br />
+                    <strong>Respuesta:</strong>
+                    <textarea readonly rows="4" cols="50">@consulta.Respuesta</textarea>
+                </li>
+            }
+        </ul>
     </section>
 </body>
 </html>

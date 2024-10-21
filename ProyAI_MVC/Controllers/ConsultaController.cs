@@ -45,7 +45,7 @@ namespace ProyAI_MVC.Controllers
 
         private async Task<string> ObtenerRespuestaChatGPT(string pregunta)
         {
-            var apiKey = "TU_API_KEY"; // Reemplaza con tu clave de API de OpenAI
+            var apiKey = "Aqui va la ApiKey"; // Reemplaza con tu clave de API de OpenAI
             var requestBody = new
             {
                 model = "gpt-3.5-turbo",
