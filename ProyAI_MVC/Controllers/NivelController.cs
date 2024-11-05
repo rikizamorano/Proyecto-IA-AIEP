@@ -11,12 +11,14 @@ namespace ProyAI_MVC.Controllers
     public class NivelController : Controller
     {
 
-        private readonly MiDbContext _context;
+        private readonly MiDbContextN _contextn;
         private readonly HttpClient _httpClient;
 
         public IActionResult Index()
         {
-            return View();
+            var niveles = _contextn.Nivel.ToList();
+            // Pasar los niveles a la vista
+            return View(niveles);
         }
     }
 }

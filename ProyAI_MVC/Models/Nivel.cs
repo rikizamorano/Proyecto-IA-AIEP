@@ -2,7 +2,7 @@
 {
     public class Nivel
     {
-        public int IdNivel { get; set; } 
-        public string NombreNivel { get; set; }
+        public int id_nivel { get; set; } 
+        public string nivel_nombre { get; set; }
     }
 }

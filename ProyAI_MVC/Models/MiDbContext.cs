@@ -10,4 +10,19 @@ namespace ProyAI_MVC.Models
         public DbSet<Consulta> Consultas { get; set; }
 
     }
+
+
+    public class MiDbContextN : DbContext
+    {
+        public MiDbContextN(DbContextOptions<MiDbContext> options) : base(options) { }
+
+        
+        public DbSet<Nivel> Nivel { get; set; }
+
+    }
+
+
+
+
+
 }
