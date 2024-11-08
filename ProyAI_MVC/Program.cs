@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MiDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MiConexion")));
 
+//hola doy yo
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
